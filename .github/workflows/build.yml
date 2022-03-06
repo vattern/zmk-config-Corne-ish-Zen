@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Chockea Left)
-        run: west build -s zmk/app -b chockea_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west  build -s zmk/app -b chockea_left -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Chockea DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/Chockea_left.dts.pre.tmp
